@@ -15,14 +15,17 @@ public class FibonacciLazyList implements ILazyList<Integer>{
     @Override
     public Integer next() {
         if(this.n == 0){
+            this.n++;
             return 0;
         }
         else if(this.n == 1){
+            this.n++;
             return 1;
         }
         this.fibonacci = prevPrevFib + prevFib;
         this.prevPrevFib = this.prevFib;
-        this. prevFib = this.fibonacci;
+        this.prevFib = this.fibonacci;
+        System.out.print("n ->" + this.n + ": \n" + this.fibonacci + "\n");
         this.n++;
         return this.fibonacci;
     }
