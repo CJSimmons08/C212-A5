@@ -10,7 +10,8 @@ public class LazyListTakeTest {
 
     @Test
     public void test() {
-
+        fibonacciUpTo5Test();
+        fibonacciUpTo20Test();
     }
 
     @Test
@@ -29,5 +30,21 @@ public class LazyListTakeTest {
                 () -> assertEquals(3, finalTestList.get(4)),
                 () -> assertEquals(5, finalTestList.get(5))
         );
+    }
+
+    @Test
+    public void fibonacciUpTo20Test(){
+        ILazyList<Integer> fib = new FibonacciLazyList();
+        LazyListTake<Integer> take = new LazyListTake<>(fib, 21);
+        List<Integer> testList = new ArrayList<>();
+        testList = take.getList();
+
+        List<Integer> finalTestList = testList;
+        try{
+            assertEquals(6765, finalTestList.get(20));
+        }
+        catch (Exception e){
+            fail(e.toString());
+        }
     }
 }

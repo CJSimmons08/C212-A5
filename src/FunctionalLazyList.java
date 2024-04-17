@@ -14,7 +14,7 @@ public class FunctionalLazyList <T, I, R> implements ILazyList{
     @Override
     public Object next() {
         T previous = initialValue;
-        initialValue = (T) f.apply((I) initialValue);
+        initialValue = (T) f.apply((I)initialValue);
         return previous;
     }
 }
