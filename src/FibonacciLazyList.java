@@ -25,7 +25,6 @@ public class FibonacciLazyList implements ILazyList<Integer>{
         this.fibonacci = prevPrevFib + prevFib;
         this.prevPrevFib = this.prevFib;
         this.prevFib = this.fibonacci;
-        System.out.print("n ->" + this.n + ": \n" + this.fibonacci + "\n");
         this.n++;
         return this.fibonacci;
     }

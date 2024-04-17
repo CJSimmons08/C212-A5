@@ -62,7 +62,4 @@ public class SpellChecker {
     }
 
 
-    public static void main(String[] args) throws IOException {
-        spellChecker("C:\\Users\\coshn\\IdeaProjects\\C212-A5\\src\\dictionary.txt", "C:\\Users\\coshn\\IdeaProjects\\C212-A5\\src\\file3a.in");
-    }
 }

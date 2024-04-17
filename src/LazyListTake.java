@@ -21,6 +21,6 @@ public class  LazyListTake <T> implements ILazyList {
 
     @Override
     public Object next() {
-        return null;
+        return intakeList.next();
     }
 }
