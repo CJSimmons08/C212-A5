@@ -19,9 +19,6 @@ public class SpellChecker {
         }
 
 
-        /*
-        * FIGURE OUT HOW TO FIX THE "[I will]" BUG
-        */
 
         String finalString = "";
         String currentWord = file.next();
