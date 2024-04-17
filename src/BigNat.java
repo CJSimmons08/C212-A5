@@ -38,7 +38,6 @@ public class BigNat implements Comparable<BigNat>{
                 list.set(i, remainder);
                 list.set(i + 1, list.get(i + 1) + tensPlace);
             }
-
         }
         if(list.size() < bn.list.size()){
             for(int i = smallestSize; i < bn.list.size(); i++){
@@ -49,9 +48,7 @@ public class BigNat implements Comparable<BigNat>{
 
     public void sub(BigNat bn){
         if(this.compareTo(bn) < 0){
-            for(int i = 0; i <= list.size() - 1; i++){
-                list.remove(i);
-            }
+            list.clear();
             list.add(0);
         }
     }
